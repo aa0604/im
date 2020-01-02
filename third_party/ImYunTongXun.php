@@ -52,6 +52,10 @@ class ImYunTongXun extends \xing\im\core\ImBaseActive implements \xing\im\core\I
     {
 
     }
+    public function sendSystem($msg, $toUser, $user, $extOpts = [])
+    {
+
+    }
 
     public function config($config)
     {

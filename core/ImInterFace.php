@@ -11,6 +11,14 @@ namespace xing\im\core;
 
 interface ImInterFace
 {
+
+    /**
+     * 注：一般返回自身
+     * @param $config
+     * @return $this
+     */
+    public function config($config);
+
     /**
      * @param $msg
      * @param $toUser
@@ -30,11 +38,5 @@ interface ImInterFace
     public function sendText($msg, $toUser, $user, $extOpts = []);
     public function sendSound($msg, $toUser, $user, $extOpts = []);
     public function sendImage($msg, $toUser, $user, $extOpts = []);
-
-    /**
-     * 注：一般返回自身
-     * @param $config
-     * @return $this
-     */
-    public function config($config);
+    public function sendSystem($msg, $toUser, $user, $extOpts = []);
 }

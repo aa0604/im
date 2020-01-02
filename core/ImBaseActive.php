@@ -22,6 +22,17 @@ class ImBaseActive
 
     protected $postTime;
 
+    // 消息类型：文字
+    const TYPE_TEXT = 0;
+    // 消息类型：图片
+    const TYPE_IMAGE = 1;
+    // 消息类型：声音
+    const TYPE_SOUND = 2;
+    // 消息类型：文件
+    const TYPE_FILE = 5;
+    // 消息类型：系统
+    const TYPE_SYSTEM = 9;
+
 
     public function post($url, $post = [], $header = [])
     {

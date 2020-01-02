@@ -64,6 +64,10 @@ class ImRongCloud extends \xing\im\core\ImBaseActive implements \xing\im\core\Im
     {
 
     }
+    public function sendSystem($msg, $toUser, $user, $extOpts = [])
+    {
+
+    }
 
     /**
      * @param $config

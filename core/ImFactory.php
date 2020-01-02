@@ -16,6 +16,7 @@ class ImFactory
         'YunTongXun' => '\xing\im\third_party\ImYunTongXun',
         'ImRongCloud' => '\xing\im\third_party\ImRongCloud',
         'ImRongCloudYii' => '\xing\im\third_party\ImRongCloudYii',
+        'XingYii' => '\xing\im\third_party\XingYii',
     ];
 
     public $defaultClass = 'YunTongXun';

@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "xing/helper": "*"
+        "xing/helper": "~1.1.0"
     },
     "autoload": {
         "psr-4": {

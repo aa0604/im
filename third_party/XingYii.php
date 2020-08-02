@@ -10,13 +10,13 @@ namespace xing\im\third_party;
 
 /**
  * Class XingYii
- * @property \common\models\im\LoveImMessage $modelImMessage
+ * @property \xing\im\models\yii\ImMessage $modelImMessage
  * @package xing\im\third_party
  */
 class XingYii extends \xing\im\core\ImBaseActive implements \xing\im\core\ImInterFace
 {
     // 使用模型
-    public $modelImMessage = '\common\models\im\LoveImMessage';
+    public $modelImMessage = '\xing\im\models\yii\ImMessage';
 
     /**
      * 注：一般返回自身
@@ -46,9 +46,9 @@ class XingYii extends \xing\im\core\ImBaseActive implements \xing\im\core\ImInte
      * @param $toUserId
      * @param $msg
      * @param $type
-     * @return common\models\elastic\LoveImMessage
+     * @return mixed|\xing\im\models\yii\ImMessage
      */
-    protected function create($senderUserId, $toUserId, $msg, $type)
+    public function create($senderUserId, $toUserId, $msg, $type)
     {
 //        $this->modelImMessage::updateMapping();
         return $this->modelImMessage::create($senderUserId, $toUserId, $msg, $type);
@@ -60,7 +60,7 @@ class XingYii extends \xing\im\core\ImBaseActive implements \xing\im\core\ImInte
      * @param $toUserId
      * @param $senderUserId
      * @param array $extOpts
-     * @return mixed|common\models\elastic\LoveImMessage
+     * @return mixed|\xing\im\models\yii\ImMessage
      */
     public function sendText($msg, $toUserId, $senderUserId, $extOpts = [])
     {
@@ -73,7 +73,7 @@ class XingYii extends \xing\im\core\ImBaseActive implements \xing\im\core\ImInte
      * @param $toUserId
      * @param $senderUserId
      * @param array $extOpts
-     * @return common\models\elastic\LoveImMessage
+     * @return \xing\im\models\yii\ImMessage
      */
     public function sendSound($msg, $toUserId, $senderUserId, $extOpts = [])
     {
@@ -86,7 +86,7 @@ class XingYii extends \xing\im\core\ImBaseActive implements \xing\im\core\ImInte
      * @param $toUserId
      * @param $senderUserId
      * @param array $extOpts
-     * @return common\models\elastic\LoveImMessage
+     * @return \xing\im\models\yii\ImMessage
      */
     public function sendImage($msg, $toUserId, $senderUserId, $extOpts = [])
     {
@@ -99,7 +99,7 @@ class XingYii extends \xing\im\core\ImBaseActive implements \xing\im\core\ImInte
      * @param $toUserId
      * @param $senderUserId
      * @param array $extOpts
-     * @return common\models\elastic\LoveImMessage
+     * @return \xing\im\models\yii\ImMessage
      */
     public function sendSystem($msg, $toUserId, $senderUserId, $extOpts = [])
     {
